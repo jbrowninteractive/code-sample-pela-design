@@ -1,7 +1,7 @@
-
 # Project
 
-Joseph Brown | Full Stack Code Sample
+Joseph Brown | Javascript Engineer
+Full Stack Code Sample
 
 ## Description
 
