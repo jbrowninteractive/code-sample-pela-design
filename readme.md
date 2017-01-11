@@ -1,4 +1,6 @@
-# Pela Full Stack Code Sample #
+# Project #
+
+Pela Full Stack Code Sample
 
 ## Description ##
 
