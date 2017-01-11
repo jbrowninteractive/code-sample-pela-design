@@ -1,0 +1,12 @@
+textarea
+{
+    width: 350px;
+    height: 150px;
+}
+
+.image-ui img
+{
+    display: block;
+    margin-top: 10px;
+    width: 124px;
+}

@@ -1,0 +1,41 @@
+doctype html
+
+html
+
+  head
+
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    title= title
+
+    //- JQUERY + UI
+    link(rel="stylesheet", href="/admin/lib/jquery-ui.css")
+    script(src="/admin/lib/jquery-1.12.4.js")
+    script(src="/admin/lib/jquery-ui.js")
+
+    link(rel='stylesheet', href='/admin/css/common.css')
+    link(rel='stylesheet', href='/admin/css/#{view}.css')
+
+    script(src="/admin/js/common.js")
+
+  body
+
+    nav
+        a(href="/admin/slides") Slides
+        a(href="/admin/projects") Projects
+        a(href="/admin/stories") Stories
+        a(href="/logout")
+            button Logout
+
+    div.logo
+        img(src="/admin/assets/pela-logo.png")
+
+    div.content
+
+        block content
+
+        block scripts
+            script(src="/admin/js/#{view}.js")
+
+

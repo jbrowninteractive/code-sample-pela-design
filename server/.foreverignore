@@ -1,0 +1,5 @@
+**/.git/**
+node_modules/**
+db/logs/**
+db/data/**
+assets/dynamic/**

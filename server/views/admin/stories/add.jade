@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    h1 Add Story
+
+    form(method="post", action="/admin/stories/add", enctype="multipart/form-data")
+        table
+
+            tr
+                td Category
+                td
+                    select(name="category")
+                        option awards
+                        option news
+
+            tr
+                td Title
+                td
+                    input(type="text", name="title")
+
+            tr
+                td Description
+                td
+                    textarea(type="text", name="description")
+
+            tr
+                td Image (124 x 69)
+                td.image-ui
+                    input(type="file", name="image", accept=".png,.jpg")
+                    img
+
+        input(type="submit" value="Submit")

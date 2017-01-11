@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var startup = require('../app');
+var http    = require("http");
+var debug   = require('debug')('server');
+var app     = process.global.app;
+var config  = process.global.config;
+var server  = http.createServer(app);
+
+server.listen(config.PORT, function()
+{
+    console.log("HTTP listening", config.PORT);
+});

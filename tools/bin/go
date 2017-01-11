@@ -1,0 +1,11 @@
+#!/bin/bash
+
+PROTOCOL=$(cat ../config/protocol)
+
+HOST=$(cat ../config/host)
+
+URL="$PROTOCOL://$HOST"
+
+echo "opening $URL"
+
+open $URL

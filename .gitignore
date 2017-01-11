@@ -1,0 +1,19 @@
+
+tools/keys/*
+server/db/data/*
+server/db/logs/*
+server/public/site/assets/dynamic/stories/*
+server/public/site/assets/dynamic/projects/*
+server/public/site/assets/dynamic/slides/*
+
+ # always ignore these
+.DS_Store*
+_reference*
+.local*
+node_modules*
+.elasticbeanstalk*
+.ebconfig*
+
+# always add these
+!.gitshim*
+!.gitignore*

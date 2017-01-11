@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    div.slideshow
+        each slide in slides
+            div.slide
+                - var file = device.isPhone ? slide._id + "-mobile" : slide._id
+                - var src  = "/site/assets/dynamic/slides/" + file +".png"
+                img(src="#{src}", alt="#{slide.title}")
+                div.loader
+                div.image
+                div.title #{slide.title}

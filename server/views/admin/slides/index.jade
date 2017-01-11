@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    h1 Slides
+
+    table
+
+        tr
+            th Position
+            th Image
+            th Title
+            th Edit
+            th Delete
+
+        each slide in slides
+            tr
+                td= slide.position
+                td
+                    - var src = "/site/assets/dynamic/slides/" + slide._id + ".png"
+                    a(href="#{src}" target="_blank")
+                        img.slide-img(src="#{src}")
+                td= slide.title
+                td
+                    a(href="/admin/slides/edit/#{slide._id}")
+                        button Edit
+                td
+                    form(method="post", action="/admin/slides/delete/#{slide._id}")
+                        submit
+                            button X
+
+    a(href="/admin/slides/add")
+        button Add Slide +

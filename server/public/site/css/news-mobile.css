@@ -1,0 +1,11 @@
+.section.mobile
+{
+    display: block;
+    width: 100%;
+}
+
+.story.mobile
+{
+    padding-right: 25px;
+    margin-bottom: 50px;
+}

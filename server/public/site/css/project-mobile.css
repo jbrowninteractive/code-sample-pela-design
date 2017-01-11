@@ -1,0 +1,82 @@
+
+.content.mobile
+{
+    margin: 0;
+}
+
+.title.mobile
+{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.projects .left.mobile
+{
+    display:  none;
+}
+
+.projects .right.mobile
+{
+    display: none;
+}
+
+.projects .info.mobile
+{
+    display: none;
+}
+
+.related.mobile
+{
+    display: none;
+}
+
+.info-mobile
+{
+    display: none;
+}
+
+.related-mobile
+{
+    display: none;
+}
+
+
+
+
+.info-mobile.mobile
+{
+    display: block;
+    margin: 0px 25px;
+}
+
+.info-mobile .description
+{
+    margin-top: 50px;
+    padding: 0;
+}
+
+
+.related-mobile.mobile
+{
+    display: table;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #f9f9f9;
+}
+
+.related-mobile .left
+{
+    display: table-cell;
+    padding: 15px;
+    width: 50%;
+}
+
+.related-mobile .right
+{
+    display: table-cell;
+    padding: 15px;
+    text-align: right;
+    width: 50%;
+}

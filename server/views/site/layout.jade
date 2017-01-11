@@ -1,0 +1,132 @@
+doctype html
+
+html
+
+  head
+
+    meta(charset="utf-8")
+    meta(name="HandheldFriendly", content="true")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+    title= title
+
+
+    link(rel='stylesheet', href='/site/css/common.css')
+    link(rel='stylesheet', href='/site/css/common-mobile.css')
+    link(rel='stylesheet', href='/site/css/' + view + '.css')
+    link(rel='stylesheet', href='/site/css/' + view + '-mobile.css')
+
+    script(src="/site/lib/jquery-1.12.4.js")
+
+    script.
+        var device = !{JSON.stringify(device)}
+        var config = !{JSON.stringify(config)}
+
+
+  body
+
+    style.
+
+        body
+        {
+            overflow-y: hidden;
+        }
+
+        .page-loader
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            top: 0;
+            left:0;
+            text-align:center;
+            z-index: 1000;
+        }
+
+        .load-icon
+        {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+        }
+
+        .load-text
+        {
+            margin-top: 10px;
+            color: #BB494B;
+        }
+
+    div.page-loader
+        div.load-icon
+            img.load-img(src="/site/assets/static/loading.gif")
+            div.load-text P.E.L.A
+
+    script.
+        (function(){
+            var icon = document.getElementsByClassName("load-icon")[0];
+            var margin = window.innerHeight * 0.5 - icon.offsetHeight * 0.5;
+            icon.style.top = margin + "px";
+
+            var img = document.getElementsByClassName("load-img")[0];
+            img.onload = function()
+            {
+                icon.style.opacity = 1;
+            };
+        })();
+
+
+
+    div.header
+
+        div.nav
+            a(href="/") Home
+            a(href="/projects") Projects
+            a(href="/about") About Us
+            a(href="/news") News & Awards
+            a(href="/contact") Contact
+
+        div.logo
+            a(href="/")
+                img(src="/site/assets/static/pela-logo.png")
+
+
+    div.header-shim
+
+    div.content
+
+        block content
+
+
+    div.footer
+            a(href="/") Home
+            a(href="/projects") Projects
+            a(href="/about") About Us
+            a(href="/news") News & Awards
+            a(href="/contact") Contact
+
+    div.header-mobile
+
+        div.logo
+            a(href="/")
+                img(src="/site/assets/static/pela-logo-mobile.png")
+
+        div.menu-btn
+            img(src="/site/assets/static/menu-btn.png")
+
+        div.nav
+           div.menu-close-btn
+                img(src="/site/assets/static/menu-close-btn.png")
+            a(href="/") Home
+            a(href="/projects") Projects
+            a(href="/about") About Us
+            a(href="/news") News & Awards
+            a(href="/contact") Contact
+
+    div.shim
+
+
+    script(src="/site/js/common.js")
+    script(src="/site/js/" + view + ".js")
+    script(src="/site/js/hide-loader.js")
+

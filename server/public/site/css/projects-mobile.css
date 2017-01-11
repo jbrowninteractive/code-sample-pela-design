@@ -1,0 +1,83 @@
+
+.content.mobile
+{
+    margin: 0;
+}
+
+.title.mobile
+{
+    margin-left: 25px;
+}
+
+.title .type.mobile
+{
+    display: none;
+}
+
+.thumbs.mobile
+{
+    width: 100%;
+}
+
+.thumbs td.mobile
+{
+    display: block;
+    width: 100%;
+}
+
+.thumb .desc.mobile
+{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    color: white;
+    opacity: 1;
+}
+
+.thumb .cell.mobile
+{
+    padding: 15px;
+}
+
+.types.mobile
+{
+    display: none;
+}
+
+.types-mobile
+{
+    display: none;
+    margin-bottom: 35px;
+    margin-left: 25px;
+    width: 100%;
+    height: 50px;
+}
+
+.types-mobile.mobile
+{
+    display: block;
+}
+
+.types-mobile .type
+{
+    color: #BB494B;
+    vertical-align: middle;
+    height: 50px;
+}
+
+.types-mobile .down-arrow
+{
+    width: 15px;
+    margin-right: 10px;
+}
+
+.types-mobile .types-input
+{
+    opacity: 0;
+    display: block;
+    margin-top: -50px;
+}
+

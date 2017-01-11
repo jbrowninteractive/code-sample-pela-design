@@ -1,0 +1,125 @@
+.content
+{
+    margin: 0 25px;
+}
+
+.title
+{
+    margin: 25px 0;
+}
+
+.title .type
+{
+    font-size: 70%;
+    display: inline-block;
+    padding-left: 7px;
+}
+
+.thumbs
+{
+    display: inline-block;
+    width: 70%;
+}
+
+.thumbs table
+{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.thumbs td
+{
+    width: 33%;
+    padding: 0;
+    margin:0;
+    position: relative;
+}
+
+.thumb img
+{
+    width: 100%;
+    opacity: 0.01;
+}
+
+.thumb .img
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.thumb .desc
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    color: #454545;
+    vertical-align: middle;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.thumb .desc:hover
+{
+    opacity: 1;
+}
+
+.thumb .text
+{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.thumb .cell
+{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.types
+{
+    display: inline-block;
+    width: 25%;
+    margin-left: 5%;
+    vertical-align: top;
+}
+
+.types .heading
+{
+    font-size: 95%;
+    margin-bottom: 15px;
+}
+
+.types .by
+{
+    font-size: 85%;
+    margin-bottom: 20px;
+}
+
+.types .type
+{
+    font-size: 75%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.types .type a
+{
+    color: #BB494B;
+}
+
+.types .type a:hover
+{
+    text-decoration: underline;
+}

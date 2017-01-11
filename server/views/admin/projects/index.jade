@@ -1,0 +1,44 @@
+extends ../layout
+
+block content
+    h1 Projects
+
+    table
+
+        tr
+            th Image
+            th Title
+            th Location
+            th Description
+            th Types
+            th Active
+            th Edit
+            th Delete
+
+        each project in projects
+            tr
+                td
+                    if project.images.length == 0
+                        - var src = "/site/assets/static/projects/default-thumb.png"
+                    else
+                        - var src  = "/site/assets/dynamic/projects/" + project._id + "/"
+                        -     src += project.images[0].id + "-thumb.png"
+                    img.thumb(src="#{src}")
+                td= project.title
+                td= project.location
+                td= project.description
+                td
+                    each type in project.types
+                        div= type
+                // td= project.active. ? "true" : "false"
+                td= project.active
+                td
+                    a(href="/admin/projects/edit/#{project._id}")
+                        button Edit
+                td
+                    form(method="post", action="/admin/projects/delete/#{project._id}")
+                        submit
+                            button X
+
+    a(href="/admin/projects/add")
+        button Add Project +

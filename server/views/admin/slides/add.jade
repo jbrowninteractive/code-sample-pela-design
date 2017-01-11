@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    h1 Add Slide
+
+    form(method="post", action="/admin/slides/add", enctype="multipart/form-data")
+        table
+            tr
+                td Position
+                td
+                    select(name="position")
+                        - var position = count + 1
+
+                        - for (var i=1; i<=position; ++i) {
+                            if i < position
+                                option(value="#{i}") #{i}
+                            else
+                                option(value="#{i}", selected) #{i}
+                        - }
+
+            tr
+                td Title
+                td
+                    input(type="text", name="title")
+
+            tr
+                td Image (1024 x 768)
+                td.image-ui
+                    input(type="file", name="image", accept=".png,.jpg")
+                    img
+
+        input(type="submit" value="Submit")

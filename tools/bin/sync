@@ -1,0 +1,16 @@
+#!/bin/bash
+
+HOST=$(cat ../config/host)
+KEY="$(cat ../config/key).pem"
+
+echo "using $KEY to sync with $HOST"
+
+rsync --progress --recursive --delete \
+    -e "ssh -i ../keys/$KEY" \
+    --exclude "node_modules/" \
+    --exclude "db/data/*" \
+    --exclude "db/log/*" \
+    --exclude "public/site/assets/dynamic/*" \
+    ../../server/ ec2-user@$HOST:~/server/
+
+osascript -e beep

@@ -1,0 +1,67 @@
+extends ../layout
+
+
+
+block content
+
+    script.
+        var types   = !{JSON.stringify(types)}
+
+    h1 Edit Project
+
+    form(method="post", action="/admin/projects/edit/#{project._id}", enctype="multipart/form-data")
+        table
+
+            tr
+                td Active
+                td
+                    if project.active
+                        input(type="checkbox", name="active", checked)
+                    else
+                        input(type="checkbox", name="active")
+
+            tr
+                td Title
+                td
+                    input(type="text", name="title", value="#{project.title}")
+
+            tr
+                td Location
+                td
+                    input(type="text", name="location", value="#{project.location}")
+
+            tr
+                td Description
+                td
+                    textarea(name="description")= project.description
+
+            tr
+                td
+                    div Types
+                    button(type="button", onclick="addType()").add-type-btn Add +
+                td.types-node
+                    each type in project.types
+                        script.
+                            (function()
+                            {
+                                var par  = document.getElementsByClassName("types-node")[0];
+                                var node = new TextComponent("types", types, "#{type}");
+                                par.appendChild(node);
+                            })();
+            tr
+                td
+                    div Images
+                    button(type="button", onclick="addImage()").add-img-btn Add +
+                td.images-node
+                    each image in project.images
+                        script.
+                            (function()
+                            {
+                                var par  = document.getElementsByClassName("images-node")[0];
+                                var src  = "/site/assets/dynamic/projects/";
+                                    src += "#{project._id}/#{image.id}.png";
+                                var node = new ImageComponent(src, "#{image.id}");
+                                par.appendChild(node);
+                            })();
+
+        input(type="submit" value="Submit")

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+HOST=$(cat ../config/host)
+KEY="$(cat ../config/key).pem"
+
+echo "using $KEY to connect to $HOST"
+
+ssh -i ../keys/$KEY ec2-user@$HOST
+

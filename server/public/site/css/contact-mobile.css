@@ -1,0 +1,47 @@
+
+.title.mobile
+{
+    display: none;
+}
+
+.title-mobile
+{
+    display: none;
+}
+
+.title-mobile.mobile
+{
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.main-img.mobile
+{
+    display: block;
+    width: 110%;
+    margin-left: -25px;
+}
+
+.info-container.mobile
+{
+    float: none;
+}
+
+.info-container.mobile .directions
+{
+    display: none;
+}
+
+.map-container.mobile
+{
+    margin-top: 50px;
+}
+
+
+.map-container.mobile .info
+{
+    float: none;
+    display: block;
+    margin-top: 25px;
+}

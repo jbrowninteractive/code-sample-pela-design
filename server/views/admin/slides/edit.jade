@@ -1,0 +1,32 @@
+extends ../layout
+
+block content
+    h1 Edit Slide
+
+    form(method="post", action="/admin/slides/edit/#{slide.id}", enctype="multipart/form-data")
+        table
+            tr
+                td Position
+                td
+                    select(name="position")
+
+                        - for (var i=1; i<=count; ++i) {
+                            if i === slide.position
+                                option(value="#{i}", selected) #{i}
+                            else
+                                option(value="#{i}") #{i}
+                        - }
+
+            tr
+                td Title
+                td
+                    input(type="text", name="title", value="#{slide.title}")
+
+            tr
+                td Image
+                td.image-ui
+                    input(type="file", name="image", accept=".png,.jpg")
+                    img(src="/site/assets/dynamic/slides/#{slide._id}.png")
+
+
+        input(type="submit" value="Submit")

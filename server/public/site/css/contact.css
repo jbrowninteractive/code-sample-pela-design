@@ -1,0 +1,63 @@
+
+.content
+{
+    padding-left: 25px;
+}
+
+.title
+{
+    margin: 25px 0 45px 0px;
+}
+
+.main-img
+{
+    width: 65%;
+    display: inline-block;
+}
+
+.main-img img
+{
+    width: 100%;
+}
+
+.info-container
+{
+    line-height: 200%;
+    float: right;
+    margin-right: 100px;
+}
+
+.info-container .block
+{
+    margin: 0 0 25px 0;
+}
+
+.info-container .name
+{
+    font-weight: bold;
+}
+
+.info-container .heading
+{
+    margin: 0 0 10px 0;
+    color: #BB494B;
+    font-size: 90%;
+}
+
+.map-container
+{
+    margin-top: 100px;
+    width: 400px;
+}
+
+.map-container .map-img
+{
+    display: inline-block;
+}
+
+.map-container .info
+{
+    display: inline-block;
+    float: right;
+    line-height: 175%;
+}

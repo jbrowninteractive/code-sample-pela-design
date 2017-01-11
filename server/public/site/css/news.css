@@ -1,0 +1,59 @@
+.content
+{
+    padding: 0 25px;
+}
+
+.section
+{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.section .heading
+{
+    color: #BB494B;
+    font-size: 120%;
+    margin-bottom: 50px;
+}
+
+.story
+{
+    padding-right: 100px;
+    margin-bottom: 75px;
+}
+
+.story .thumb
+{
+    display: table-cell;
+    padding-right: 15px;
+}
+
+.story .info
+{
+    display: table-cell;
+    vertical-align: top;
+}
+
+.story .info .caption
+{
+    color: #BB494B;
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+
+
+.story .info .description
+{
+    word-break: break-word;
+    line-height: 175%;
+}
+
+
+.story .info .description a
+{
+    text-decoration: underline;
+}
+

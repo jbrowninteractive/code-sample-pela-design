@@ -1,0 +1,115 @@
+extends layout
+
+block content
+
+    - var defaultImg = "/site/assets/static/projects/default.png"
+
+
+    div.projects
+
+        div.left
+
+            div.container
+
+                -var image = prevProject.images[0]
+                -var src = image ? "/site/assets/dynamic/projects/" + prevProject._id + "/" + image.id + ".png" : defaultImg
+                a(href="/projects/" + prevProject._id)
+                    div.left-img(style="background-image: url('" + src + "')")
+
+                a(href="/projects/" + prevProject._id)
+                    img.arrow(src="/site/assets/static/project/arrow-left.png")
+
+
+        div.middle
+
+            div.title= project.title
+
+            div.slideshow
+                if !project.images || project.images.length === 0
+
+                        -var src = "/site/assets/dynamic/projects/" + project._id + "/" + image.id + ".png"
+                        img.slide(src="#{defaultImg}")
+                else
+                    for image in project.images
+                        -var src = "/site/assets/dynamic/projects/" + project._id + "/" + image.id + ".png"
+                        img.slide(src="#{src}")
+
+
+            div.dots
+
+            div.info
+
+                div.info-left
+
+                    div.location.block
+                        div.sub-heading LOCATION
+                        div= project.location
+
+                    div.types.block
+                        div.sub-heading TYPE
+                        div
+                            for type in project.types
+                                div.type= type
+
+                div.info-right
+
+                    div.description.block= project.description
+
+
+        div.right
+
+            div.container
+
+                -var image = nextProject.images[0]
+                -var src = image ? "/site/assets/dynamic/projects/" + nextProject._id + "/" + image.id + ".png" : defaultImg
+
+                a(href="/projects/" + nextProject._id)
+                    div.right-img(style="background-image: url('" + src + "')")
+
+                a(href="/projects/" + nextProject._id)
+                    img.arrow(src="/site/assets/static/project/arrow-right.png")
+
+
+
+    div.related
+
+        div.sub-heading RELATED PROJECTS
+
+        for project in relatedProjects
+            -var href = "/projects/" + project._id
+            -var image = project.images[0]
+            -var src = image ? "/site/assets/dynamic/projects/" + project._id + "/" + image.id + ".png" : defaultImg
+
+            a(href="#{href}")
+                img(src="#{src}")
+
+
+
+    div.info-mobile
+
+        div.location.block
+            div.sub-heading LOCATION
+            div= project.location
+
+        div.types.block
+            div.sub-heading TYPE
+            div
+                for type in project.types
+                    div.type= type
+
+
+        div.description.block= project.description
+
+
+
+    div.related-mobile
+
+        div.left
+            a(href="/projects/" + prevProject._id)
+                div Previous Project
+
+        div.right
+            a(href="/projects/" + nextProject._id)
+                div Next Project
+
+    script(src="/site/lib/jquery.touchwipe.min.js")

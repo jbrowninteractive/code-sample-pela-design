@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+    h1 Edit Story
+
+    form(method="post", action="/admin/stories/edit/#{story.id}", enctype="multipart/form-data")
+        table
+
+            tr
+                td Category
+                td
+                    select(name="category")
+                        if story.category == "awards"
+                            option(selected) awards
+                            option news
+                        else
+                            option awards
+                            option(selected) news
+            tr
+                td Title
+                td
+                    input(type="text", name="title", value="#{story.title}")
+
+            tr
+                td Description
+                td
+                    textarea(type="text", name="description")= story.description
+
+            tr
+                td Image (124 x 69)
+                td.image-ui
+                    input(type="file", name="image", accept=".png,.jpg")
+                    img(src="/site/assets/dynamic/stories/#{story._id}.png")
+
+
+        input(type="submit" value="Submit")

@@ -1,0 +1,34 @@
+extends layout
+
+block content
+
+    div.section.news
+
+        div.heading News
+
+        each story in news
+
+            div.story
+
+                div.thumb
+                    img(src="/site/assets/dynamic/stories/#{story._id}.png")
+
+                div.info
+                    div.caption= story.title
+                    div.description!= story.description
+
+
+    div.section.awards
+
+        div.heading Awards
+
+        each story in awards
+
+            div.story
+
+                div.thumb
+                    img(src="/site/assets/dynamic/stories/#{story._id}.png")
+
+                div.info
+                    div.caption= story.title
+                    div.description!= story.description

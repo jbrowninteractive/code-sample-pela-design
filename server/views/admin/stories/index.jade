@@ -1,0 +1,35 @@
+extends ../layout
+
+block content
+    h1 Stories
+
+    table
+
+        tr
+            th Image
+            th Category
+            th Title
+            th Description
+            th Edit
+            th Delete
+
+        each story in stories
+            tr
+                td
+                    - var src = "/site/assets/dynamic/stories/" + story._id + ".png"
+                    a(href="#{src}" target="_blank")
+                        img.story-img(src="#{src}")
+                td= story.category
+                td= story.title
+                td= story.description
+
+                td
+                    a(href="/admin/stories/edit/#{story._id}")
+                        button Edit
+                td
+                    form(method="post", action="/admin/stories/delete/#{story._id}")
+                        submit
+                            button X
+
+    a(href="/admin/stories/add")
+        button Add Story +

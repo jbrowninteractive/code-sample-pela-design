@@ -1,0 +1,81 @@
+extends layout
+
+block content
+
+
+
+    if type
+        div.title Projects
+            div.type - #{type}
+
+    else
+        div.title Projects
+
+
+    div.types-mobile
+
+        div.type
+            img.down-arrow(src="/site/assets/static/projects/down-arrow.png")
+            span= type || "All"
+
+
+        select.types-input
+
+            if type
+                option(value="") All
+            else
+                option(value="", selected) All
+
+            each item in types
+                if item == type
+                    option(value="#{item}", selected) #{item}
+                else
+                    option(value="#{item}") #{item}
+
+
+
+    div.thumbs
+
+
+        table
+
+
+            - var i = 0
+
+            each project in projects
+
+                if i%3 == 0
+                    tr
+
+                td.thumb
+                    if project.images.length == 0
+                        - var src = "/site/assets/static/projects/default.png"
+                    else
+                        -var src  = "/site/assets/dynamic/projects/"
+                        -    src += project._id + "/"
+                        -    src += project.images[0].id + ".png"
+
+                    a(href="/projects/#{project._id}")
+
+                        img(src="#{src}")
+
+                        div.img(style="background-image:url('"+ src +"')")
+
+                        div.desc
+                            div.text
+                                div.cell= project.title
+
+                - i++
+
+    div.types
+
+        div.heading
+            a(href="/projects") ALL
+
+        div.by By Type
+
+        each item in types
+                div.type
+                    a(href="/projects?type=#{item}")
+                        span= item
+                    span ,

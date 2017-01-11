@@ -1,0 +1,106 @@
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+    select,
+    textarea,
+    input
+    {
+        font-size: 16px;
+    }
+}
+
+.header.mobile
+{
+    display: none;
+}
+
+.header-mobile
+{
+    display: none;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    border-top: 5px solid #BB494B;
+    background: white;
+}
+
+.header-mobile.mobile
+{
+    display: block;
+}
+
+.header-mobile .nav
+{
+    padding: 25px;
+    background: white;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.header-mobile .nav a
+{
+    display: block;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+
+.header-mobile .menu-btn
+{
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.header-mobile .menu-btn img
+{
+    width: 40px;
+}
+
+
+.header-mobile .logo
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 13px;
+    padding-top: 13px;
+}
+
+.header-mobile .logo img
+{
+    width: 35px;
+}
+
+
+.header-mobile .menu-close-btn
+{
+    margin-left: -13px;
+    margin-top: -14px;
+    padding-bottom: 25px;
+}
+
+.title-mobile
+{
+    color: #BB494B;
+    font-size: 200%;
+}
+
+.header-shim.mobile
+{
+    display: block;
+    height: 65px;
+}
+
+.content.mobile
+{
+    overflow-x: hidden;
+}
+
+
+.footer .mobile
+{
+    display: none;
+}

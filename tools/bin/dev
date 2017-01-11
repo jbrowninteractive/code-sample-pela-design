@@ -1,0 +1,4 @@
+#!/bin/sh
+source ~/.bash_profile
+
+forever --watch --watchDirectory ../../server/ --watchIgnore / ../../server/bin/www
