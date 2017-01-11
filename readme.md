@@ -1,5 +1,5 @@
 
-### Project
+# Project
 
 Joseph Brown | Full Stack Code Sample
 
