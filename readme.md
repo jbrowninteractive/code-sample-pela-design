@@ -8,4 +8,4 @@ Sample of code I've written for a Baltimore based landscape architecture company
 
 ## Responsibilities ##
 
-All Code
+Complete Code Base
