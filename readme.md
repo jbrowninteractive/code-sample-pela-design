@@ -12,6 +12,6 @@ Complete Code Base
 
 ## Images ##
 
-![Screen Shot 2017-01-13 at 10.49.30 AM.png](https://bitbucket.org/repo/Lqjdbg/images/1524072866-Screen%20Shot%202017-01-13%20at%2010.49.30%20AM.png)
+![Screen Shot 2017-01-13 at 1.24.14 PM.png](https://bitbucket.org/repo/Lqjdbg/images/1805774581-Screen%20Shot%202017-01-13%20at%201.24.14%20PM.png)
 
-![Screen Shot 2017-01-13 at 10.49.43 AM.png](https://bitbucket.org/repo/Lqjdbg/images/3050487579-Screen%20Shot%202017-01-13%20at%2010.49.43%20AM.png)
+![Screen Shot 2017-01-13 at 1.24.30 PM.png](https://bitbucket.org/repo/Lqjdbg/images/2137544936-Screen%20Shot%202017-01-13%20at%201.24.30%20PM.png)
