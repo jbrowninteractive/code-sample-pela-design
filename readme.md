@@ -1,6 +1,6 @@
 # Project #
 
-Pela Full Stack Code Sample
+Pela Design Website
 
 ## Description ##
 
