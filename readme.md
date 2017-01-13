@@ -10,6 +10,8 @@ Sample of code I've written for a Baltimore based landscape architecture company
 
 Complete Code Base
 
+## Images ##
+
 ![Screen Shot 2017-01-13 at 10.49.30 AM.png](https://bitbucket.org/repo/Lqjdbg/images/1524072866-Screen%20Shot%202017-01-13%20at%2010.49.30%20AM.png)
 
 ![Screen Shot 2017-01-13 at 10.49.43 AM.png](https://bitbucket.org/repo/Lqjdbg/images/3050487579-Screen%20Shot%202017-01-13%20at%2010.49.43%20AM.png)
