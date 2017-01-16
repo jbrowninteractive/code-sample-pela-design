@@ -4,7 +4,7 @@ Pela Design Website
 
 ## Description ##
 
-Custom website for Pela Design, a Baltimore based landscape architecture company. The site includes a reponsive front-end with Jade, custom CMS with social networking verification, node.js/express backend-end, MongoDB storage. The site is hosted on an AWS EC2 instance and pushed using some small bash scripts you can find in the tools directory.
+Custom website for Pela Design, a Baltimore based landscape architecture company. The site includes a responsive front-end with Jade, custom CMS with social networking verification, Node.js/Express backend-end, MongoDB storage. The site is hosted on an AWS EC2 instance and pushed using some small bash scripts you can find in the tools directory.
 
 ## Role ##
 
