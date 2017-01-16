@@ -8,7 +8,8 @@ Sample of code written for a Baltimore based landscape architecture company. The
 
 ## Role ##
 
-Complete Code Base
+Lead Front-End Developer  
+Lead Back-End Developer
 
 ## Images ##
 
